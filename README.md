@@ -4,7 +4,7 @@
 
 A stochastic model for antibiotic resistance.
 
-<details><summary>A stochastic model for antibiotic resistance.</summary>
+<details><summary>Click to see documentation...</summary>
 
 ### Example Usage (Model)
 
