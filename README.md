@@ -1,6 +1,6 @@
 # Antibiotic Optimisation
 
-## Antibiotic Model 4.0.6
+## Model (antibiotic-model)
 
 A stochastic model for antibiotic resistance.
 
@@ -37,10 +37,14 @@ algorithms. Many objectives may be specified.
 
 </details>
 
-## Antibiotic Model Experiments
+## Experiments (antibiotic-model-experiments)
 
 Documentation to follow
 
-## Results Post-Processing
+## Offline Re-evaluation (antibiotic-offline-reeval)
+
+Documentation to follow
+
+## Results Post-Processing (results-post-processing)
 
 Documentation to follow
