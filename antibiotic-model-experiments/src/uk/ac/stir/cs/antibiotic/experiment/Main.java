@@ -16,6 +16,8 @@ import uk.ac.stir.cs.antibiotic.*;
 import static org.uma.jmetal.runner.AbstractAlgorithmRunner.*;
 import static uk.ac.stir.cs.antibiotic.AntibioticObjective.*;
 //import static uk.ac.stir.cs.jmetal.InstrumentingWrapper.instrument;
+import org.uma.jmetal.util.fileoutput.SolutionListOutput;
+import org.uma.jmetal.util.fileoutput.impl.DefaultFileOutputContext; 
 
 public class Main {
 
@@ -144,7 +146,13 @@ public class Main {
                 "Total execution time: " + computingTime + "ms");
         printFinalSolutionSet(population);
         
-        
+        new SolutionListOutput(population)
+        .setSeparator("\t")
+        .setVarFileOutputContext(new DefaultFileOutputContext("VAR.tsv"))
+        .setFunFileOutputContext(new DefaultFileOutputContext("FUN.tsv"))
+        .print();
+        JMetalLogger.logger.info("Objectives values have been written to file FUN.tsv");
+        JMetalLogger.logger.info("Variables values have been written to file VAR.tsv"); 
         
     }
 
