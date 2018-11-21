@@ -15,7 +15,7 @@ import org.uma.jmetal.util.comparator.*;
 import uk.ac.stir.cs.antibiotic.*;
 import static org.uma.jmetal.runner.AbstractAlgorithmRunner.*;
 import static uk.ac.stir.cs.antibiotic.AntibioticObjective.*;
-//import static uk.ac.stir.cs.jmetal.InstrumentingWrapper.instrument;
+import uk.ac.stir.cs.jmetal.InstrumentingWrapper;
 import org.uma.jmetal.util.fileoutput.SolutionListOutput;
 import org.uma.jmetal.util.fileoutput.impl.DefaultFileOutputContext; 
 
@@ -107,9 +107,9 @@ public class Main {
             }
         }
         
-        //final Problem<IntegerSolution> problem
-        //        = instrument(builder.build(), maxEvals);
-        final Problem<IntegerSolution> problem = builder.build();
+        final Problem<IntegerSolution> problem
+                = InstrumentingWrapper.instrument(builder.build(), maxEvals);
+        //final Problem<IntegerSolution> problem = builder.build();
 
         // Define the jMetal Algorithm
         CrossoverOperator<IntegerSolution> crossover;
