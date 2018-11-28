@@ -55,7 +55,7 @@ public class Main {
         String sampletype = arg(args, "sampletype", "fixed");
         System.err.println("sampletype = " + sampletype);
     
-        int minstart = Integer.parseInt(arg(args, "minstart", "0"));
+        int minstart = Integer.parseInt(arg(args, "minstart", "30"));
         System.err.println("minstart = " + minstart);
     
         int maxIndividualDosage = Integer.parseInt(arg(args, "dosage", "60"));
